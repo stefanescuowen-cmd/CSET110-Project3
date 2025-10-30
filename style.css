@@ -70,6 +70,10 @@ body::before{
     transform: skewY(-1deg);
 }
 
+.container img{
+    width: 100px;
+}
+
 /* Header */
 
 .container h1{
