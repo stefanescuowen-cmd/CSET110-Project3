@@ -1,0 +1,51 @@
+/* Placeholder CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button{
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkred;
+}
+
+a{
+    color: #ff4d4d;
+}
