@@ -1,8 +1,9 @@
 // Signup Handler
-
 const signupForm = document.getElementById('signupForm');
 if (signupForm){
     signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         const username = document.getElementById('newUsername').value.trim();
         const password = document.getElementById('newPassword').value;
         const confirm = document.getElementById('confirmPassword').value;
@@ -32,6 +33,7 @@ const loginForm = document.getElementById('loginForm');
 if(loginForm){
     loginForm.addEventListener('submit', (e) =>{
         e.preventDefault();
+
         const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value;
         const msg = document.getElementById('loginMessage');
@@ -46,8 +48,8 @@ if(loginForm){
             return;
         }
 
-        if (username === savedUser && password === savedPass){
-            msg.textContent = 'Login successful!';
+        if(username === savedUser && password === savedPass){
+            window.location.href = 'welcome.html'
         }
 
         else{

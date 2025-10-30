@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="https://use.typekit.net/YOUR-FONT-ID.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <div class="container">
         <h1>Sign Up</h1>
-        <form id="LoginForm">
+        <form id="signupForm" method="post" action="#">
             <label for="newUsername">Username:</label>
-            <input type="text" id="newUsername" required>
+            <input type="text" id="newUsername" autocomplete="username" placeholder="Enter username" required>
 
             <label for="newPassword">Password</label>
-            <input type="password" id="newPassword" required>
+            <input type="password" id="newPassword" autocomplete="new-password" placeholder="Enter password" required>
 
-            <label for="confirmPassword">Password</label>
-            <input type="password" id="confirmPassword" required>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" autocomplete="new-password" placeholder="Confirm password" required>
 
             <button type="submit">Sign Up</button>
 
-            <p id="loginMessage"></p>
+            <p id="signupMessage"></p>
         </form>
 
-        <p>Already have an account? <a href="index.html">Login here</a>.</p>
+        <p>Already have an account? <br><a href="index.html">Login here</a>.</p>
     </div>
 
 <script src="script.js"></script>
