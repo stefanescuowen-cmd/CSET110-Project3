@@ -80,6 +80,7 @@ body::before{
 .container img{
     width: 100px;
     margin: 15px 0;
+    opacity: 0;
 }
 
 /* Header */
@@ -138,7 +139,20 @@ button{
     transition: all 0.3s ease;
 }
 
-button:hover{
+#logoutBtn{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+#logoutBtn.visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+button:hover, #logoutBtn:hover{
     background-color: darkred;
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 0 10px crimson, 0 0 20px crimson, 0 0 30px darkred;
@@ -166,14 +180,6 @@ a:hover{
     animation: fadeIn 0.5s ease;
 }
 
-.success{
-    color: limegreen;
-}
-
-.error{
-    color: #ff4d4d;
-}
-
 .logout-message{
     position: fixed;
     top: 50%;
@@ -188,7 +194,6 @@ a:hover{
     z-index: 1000;
     text-align: center;
 }
-
 
 /* Animations */
 
@@ -205,6 +210,34 @@ a:hover{
     100% { transform: translateX(0); }
 }
 
+
 .shake{
     animation: shake 0.4s ease;
+}
+
+.success{
+    color: limegreen;
+    transition: color 0.3s ease;
+}
+
+.error{
+    color: #ff4d4d;
+    transition: shake 0.4s ease;
+}
+
+.typewriter{
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing{
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink{
+    50% { border-color: transparent; }
 }
